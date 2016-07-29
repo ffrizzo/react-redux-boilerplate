@@ -4,7 +4,7 @@ import csswring from 'csswring'
 import path from 'path'
 
 const webpackConfig = {
-    devtool: 'source-map',
+    devtool: 'cheap-module-source-map',
     entry: {
         app: [
           './src/main.js'
