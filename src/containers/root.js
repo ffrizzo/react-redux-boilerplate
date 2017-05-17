@@ -1,13 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Provider } from 'react-redux'
 import { Router } from 'react-router'
+
+import App from '../components/app'
 
 export default class Root extends React.Component {
 
     static propTypes = {
-        history: React.PropTypes.object.isRequired,
-        routes: React.PropTypes.element.isRequired,
-        store: React.PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
+        store: PropTypes.object.isRequired
     }
 
     get devTools(){
@@ -22,7 +24,7 @@ export default class Root extends React.Component {
             <Provider store={this.props.store}>
                 <div style={{ height: '100%', width: '100%' }}>
                     <Router history={this.props.history}>
-                        {this.props.routes}
+                      <App />
                     </Router>
                     {this.devTools}
                 </div>
