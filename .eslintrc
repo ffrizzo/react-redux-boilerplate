@@ -1,24 +1,40 @@
 {
-    "extends": "eslint-config-airbnb",
-    "env": {
-        "browser": true,
-        "node": true,
-        "mocha": true
-    },
-    "global": {
-        "connect": true
-    },
-    "rules": {
-        "react/jsx-uses-react": 2,
-        "react/jsx-uses-vars": 2,
-        "react/react-in-jsx-scope": 2,
-        "blocked-scopped-var": 0,
-        "padded-blocks": 0,
-        "no-console": 0,
-        "id-length": 0,
-        "no-unused-expressions": 0
-    },
-    "plugins": [
-        "react"
-    ]
+  parser: 'babel-eslint',
+  plugins: [
+    'flowtype',
+    'jsx-a11y',
+    'react',
+  ],
+  extends: [
+    'airbnb',
+  ],
+  globals: {
+    __DEBUG__: true
+  },
+  env: {
+    browser: true,
+    node: true,
+    mocha: true,
+    es6: true,
+  },
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+      generators: true,
+      experimentalObjectRestSpread: true
+    }
+  },
+  rules: {
+    react/require-extension: 0,
+    react/jsx-filename-extension: 0,
+    react/forbid-prop-types: 0,
+    react/jsx-wrap-multilines: 0,
+    react/require-default-props: 0,
+    strict: 0,
+    func-names: 0,
+    no-class-assign: 0,
+    arrow-body-style: ["error", "always"],
+  },
 }
