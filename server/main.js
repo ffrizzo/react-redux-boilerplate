@@ -18,7 +18,8 @@ app.use(WebpackDevMiddlerware(compiler, {
   publicPath,
   noInfo: true,
   hot: true,
-  logLevel: 'error',
+  silent: true,
+  stats: 'errors-only',
 }));
 
 app.use(WebPackHotMiddlerware(compiler));
