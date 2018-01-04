@@ -1,3 +1,3 @@
-require ('babel-register')
+require ('babel-register');
 
-module.exports = require('../configs/karma/karma.conf')
+module.exports = require('../configs/karma/karma.conf');
