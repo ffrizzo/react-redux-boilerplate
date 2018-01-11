@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export default class Home extends React.Component {
+const Home = () => {
+  return (
+    <div className="container-fluid">
+      <span>React Redux Boilerplate</span>
+    </div>
+  );
+};
 
-    render () {
-        return (
-            <div className='container-fluid'>
-                <span>React Redux Boilerplate</span>
-            </div>
-        )
-    }
-}
+export default Home;
